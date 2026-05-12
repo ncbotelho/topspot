@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+
+import { ConvexClientProvider } from "@/providers/convex-auth";
+import { cn } from "@/lib/utils";
+
 import { Inter, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
-import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -22,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("antialiased font-sans", geistMono.variable, inter.variable)}>
-      <body className="w-full h-full flex flex-col">{children}</body>
+      <body className="w-full h-full flex flex-col">
+        <ConvexClientProvider>{children}</ConvexClientProvider>
+      </body>
     </html>
   );
 }
