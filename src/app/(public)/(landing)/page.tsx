@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:flex-row w-full h-screen overflow-y-auto hidescroll">
+    <main className="flex flex-col md:flex-row w-full h-screen overflow-y-auto hidescroll">
       <div className="flex flex-col w-full md:w-xs md:sticky md:top-0 md:h-screen md:shrink-0 p-4 justify-between md:overflow-y-auto hidescroll">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
@@ -55,6 +55,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

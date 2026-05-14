@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("antialiased font-sans", geistMono.variable, inter.variable, figtree.variable)}>
-      <body className="flex flex-col w-full h-full h-screen">
+      <body>
         <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
