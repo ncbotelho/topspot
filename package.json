@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun run --bun next dev",
+    "dev": "concurrently -n convex,next -c cyan,magenta \"bun run convex dev\" \"bun run --bun next dev\"",
     "build": "bun run --bun next build",
-    "start": "next start",
+    "start": "bun run --bun next start",
     "lint": "eslint"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "@workos-inc/authkit-nextjs": "^4.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "concurrently": "^9.2.1",
     "convex": "^1.38.0",
     "lucide-react": "^1.14.0",
     "next": "16.2.6",

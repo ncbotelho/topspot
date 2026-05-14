@@ -3,10 +3,12 @@ import type { Metadata } from "next";
 import { ConvexClientProvider } from "@/providers/convex-auth";
 import { cn } from "@/lib/utils";
 
-import { Inter, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono, Figtree } from "next/font/google";
 import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+
+const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree" });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("antialiased font-sans", geistMono.variable, inter.variable)}>
-      <body className="w-full h-full flex flex-col">
+    <html lang="en" className={cn("antialiased font-sans", geistMono.variable, inter.variable, figtree.variable)}>
+      <body className="flex flex-col w-full h-full h-screen">
         <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>

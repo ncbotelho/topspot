@@ -5,11 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-figtree);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -39,6 +40,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -118,11 +120,47 @@
 }
 
 @layer base {
+
+  /* ----------------- GLOBAL ----------------- */
   * {
     @apply border-border outline-ring/50;
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* ----------------- TYPOGRAPHY ----------------- */
+  h1 {
+    @apply font-heading text-6xl/10 font-bold tracking-tighter;
+  }
+
+  p {
+    @apply tracking-tight;
+  }
+
+  /* ----------------- SCROLL BEHAVIOR ----------------- */
+  *,
+  .hidescroll:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .hidescroll {
+    scrollbar-color: transparent transparent;
+  }
+
+  .hidescroll::-webkit-scrollbar-thumb {
+    background: transparent !important;
+  }
+
+  html[data-mobile-nav-open] {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  html[data-mobile-nav-open] body {
+    overflow: hidden;
+    overscroll-behavior: none;
   }
 }
