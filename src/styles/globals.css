@@ -132,7 +132,7 @@
 
   /* ----------------- TYPOGRAPHY ----------------- */
   h1 {
-    @apply font-heading text-6xl/10 font-bold tracking-tighter;
+    @apply font-heading text-6xl/12 font-bold tracking-tighter;
   }
 
   p {

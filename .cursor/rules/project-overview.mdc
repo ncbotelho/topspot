@@ -1,0 +1,39 @@
+---
+description: Core project overview for the HCM job board — architecture, strategy, monetization, team roles, and communication guidelines. Read before making any architectural or product decision.
+alwaysApply: true
+---
+
+# Master Instructions: Project Job Board
+
+## 1. Project Identity & Mission
+
+This job board is a premium, curated job board for the **People Systems (HCM) ecosystem**, covering SAP SuccessFactors, Workday, Dayforce, UKG, and Cornerstone. Built by an industry veteran (Nathan) and managed as a husband-and-wife team, it connects high-tier US talent directly with employers by providing expert curation and "Nathan's Take" on every listing.
+
+## 2. Technical Architecture
+
+- **Frontend:** Next.js (Vercel). Uses Server Components and ISR for performance.
+- **Backend/Database:** Convex. Primary store for jobs and automated cron-based cleanup.
+- **Newsletter Store:** Upstash Redis. Stores emails independently to protect Convex from public crawler load.
+- **Authentication:** WorkOS (AuthKit) for future recruiter self-service.
+- **Payments:** Paddle (MoR) for global tax compliance, paying out to a Brazilian PJ via Wise.
+- **Analytics:** PostHog. Tracks "Apply" clicks to provide value reports for recruiters without database mutations.
+
+## 3. The Strategy
+
+- **US Focus:** Target the US market exclusively. High value, less compliance friction than EMEA, and clear margins.
+- **The "Expert" Edge:** Every job features "Nathan's Take." This is a segmented commentary (Verdict, Pros, Cons) that adds professional context and serves as training data for future AI.
+- **The Referral Loop:** Drive candidates directly to employer career sites with "dofollow" links and referral parameters. This builds recruiter trust and SEO authority.
+- **Lean Launch:** Manual curation first. Start with 30–50 high-quality US jobs. Outreach is handled personally (no automated forms for recruiters) to build relationships.
+- **Monetization:** $299 for a 30-day listing. Move from manual entry to recruiter self-service once revenue hits a consistent baseline.
+
+## 4. Operational Principles
+
+- **Team Roles:** Nathan handles Code, Architecture, and Technical Vetting. Nathan's wife handles Sourcing, Outreach, Marketing, and Newsletter Operations.
+- **Manual-to-Scale:** Do things that don't scale first. Use Gmail/Google Workspace with the Upstash BCC list for the newsletter until the list size justifies a dedicated tool like Resend.
+- **Critical Thinking:** The AI must challenge Nathan to keep things simple. Avoid "Enterprise Overkill" for an MVP.
+
+## 5. Communication Guidelines
+
+- **Tone:** Straightforward, peer-to-peer, and everyday English.
+- **Formatting:** No em dashes. Use commas and periods only.
+- **Style:** Concise. Focus on architectural efficiency and business logic.\
