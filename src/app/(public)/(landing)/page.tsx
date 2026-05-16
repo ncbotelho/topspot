@@ -6,9 +6,11 @@ export default function Home() {
       <div className="flex flex-col w-full md:w-xs md:sticky md:top-0 md:h-screen md:shrink-0 p-4 justify-between md:overflow-y-auto hidescroll">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col">
-            <h1 className="select-none">
-              TOPSPOT<span className="text-base text-primary tracking-tight">HCM</span>
-            </h1>
+            <div className="flex items-end h-12">
+              <h1 className="select-none">
+                TOPSPOT<span className="text-base text-primary tracking-tight">HCM</span>
+              </h1>
+            </div>
             <p className="text-sm text-muted-foreground">A curated list of HCM jobs.</p>
           </div>
           <div className="flex flex-col gap-1">
@@ -41,7 +43,9 @@ export default function Home() {
       <div className="flex flex-col flex-1 p-4">
         <div className="w-full h-full">
           <section className="h-full">
-            <h2>Hello World - Fix dev deployment</h2>
+            <div className="flex items-end h-12">
+              <h2>Featured Jobs</h2>
+            </div>
           </section>
           <section className="h-full">
             <p>Hello World - Fix dev deployment</p>
