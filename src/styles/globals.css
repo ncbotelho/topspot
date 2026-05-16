@@ -123,7 +123,7 @@
 
   /* ----------------- GLOBAL ----------------- */
   * {
-    @apply border-border outline-ring/50;
+    @apply border-foreground outline-ring/50;
   }
 
   body {
@@ -136,7 +136,11 @@
   }
 
   h2 {
-    @apply text-4xl font-medium tracking-tighter text-muted-foreground;
+    @apply font-heading text-3xl font-medium tracking-tighter;
+  }
+
+  h3 {
+    @apply font-semibold tracking-tight;
   }
 
   p {
