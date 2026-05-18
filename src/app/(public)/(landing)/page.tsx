@@ -17,11 +17,11 @@ export function JobCard({ jobId, title, tags, salaryRange, company, location, ur
           </div>
         </div>
         {salaryRange && <p className="text-sm text-muted-foreground">{salaryRange}</p>}
-        <a href={`/companies/${company}`}>
-          <p className="text-sm text-muted-foreground line-clamp-2">{company}</p>
+        <a href={`/companies/${company}`} className="w-fit">
+          <p className="text-sm text-muted-foreground hover:text-foreground line-clamp-2">{company}</p>
         </a>
-        <a href={`/locations/${location}`}>
-          <p className="text-sm text-muted-foreground line-clamp-2">{location}</p>
+        <a href={`/locations/${location}`} className="w-fit">
+          <p className="text-sm text-muted-foreground hover:text-foreground line-clamp-2">{location}</p>
         </a>
       </div>
       <div className="flex items-center gap-2">

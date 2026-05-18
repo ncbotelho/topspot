@@ -6,14 +6,9 @@ import { cn } from "@/lib/utils";
 import { Inter, Geist_Mono, Figtree } from "next/font/google";
 import "@/styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree" });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
