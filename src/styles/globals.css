@@ -131,8 +131,16 @@
   }
 
   /* ----------------- TYPOGRAPHY ----------------- */
+  p {
+    @apply tracking-tight;
+  }
+
+  li {
+    @apply text-2xl font-semibold tracking-tighter;
+  }
+
   h1 {
-    @apply font-heading text-6xl font-bold tracking-tighter;
+    @apply font-heading text-4xl font-bold tracking-tighter;
   }
 
   h2 {
@@ -143,9 +151,6 @@
     @apply font-semibold tracking-tight;
   }
 
-  p {
-    @apply tracking-tight;
-  }
 
   /* ----------------- SCROLL BEHAVIOR ----------------- */
   *,
