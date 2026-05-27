@@ -30,56 +30,141 @@ export default function Home2() {
           <div className="flex-1 px-8">
             <p className="text-muted-foreground">ecosystem</p>
             <ul>
-              <li>SAP</li>
-              <li>Workday</li>
-              <li>Dayforce</li>
-              <li>UKG</li>
-              <li>Cornerstone</li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  SAP
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Workday
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Dayforce
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  UKG
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Cornerstone
+                </Button>
+              </li>
             </ul>
           </div>
           <div className="flex-1 px-8">
-            <p className="text-muted-foreground">experience level</p>
+            <p className="text-muted-foreground">years of experience</p>
             <ul>
-              <li>3 years</li>
-              <li>5 years</li>
-              <li>10 years</li>
-              <li>15 years</li>
-              <li>20 years</li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  less than 3
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  more than 3
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  more than 5
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  more than 10
+                </Button>
+              </li>
             </ul>
           </div>
           <div className="flex-1 px-8">
             <p className="text-muted-foreground">location</p>
             <ul>
-              <li>Texas</li>
-              <li>New York</li>
-              <li>California</li>
-              <li>Washington</li>
-              <li>Illinois</li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Texas
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  New York
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  California
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Washington
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Illinois
+                </Button>
+              </li>
             </ul>
           </div>
           <div className="flex-1 px-8">
             <p className="text-muted-foreground">contract type</p>
             <ul>
-              <li>Full-time</li>
-              <li>Part-time</li>
-              <li>Temporary</li>
-              <li>Employee</li>
-              <li>Contract</li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Full-time
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Part-time
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Temporary
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Salaried
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Hourly
+                </Button>
+              </li>
             </ul>
           </div>
           <div className="flex-1 px-8">
-            <p className="text-muted-foreground">contract type</p>
+            <p className="text-muted-foreground">workplace</p>
             <ul>
-              <li>Full-time</li>
-              <li>Part-time</li>
-              <li>Temporary</li>
-              <li>Employee</li>
-              <li>Contract</li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Remote
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  On-site
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" className="px-0 py-0 text-2xl h-auto font-semibold tracking-tighter">
+                  Hybrid
+                </Button>
+              </li>
             </ul>
           </div>
         </section>
         <section className="px-8">
-          <div className="flex w-full justify-between items-center bg-muted rounded-md p-2">
+          <div className="flex w-full justify-between items-center bg-secondary rounded-md p-2">
             <p>123</p>
             <p>123</p>
           </div>
