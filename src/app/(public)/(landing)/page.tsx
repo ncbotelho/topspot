@@ -1,18 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 
-import { SearchIcon } from "lucide-react";
+import { SearchIcon, SlidersHorizontal } from "lucide-react";
 
 export default function Home2() {
   return (
     <>
-      <header className="grid w-full lg:grid-cols-3 grid-cols-2 sticky top-0 z-10 items-center py-4 px-8">
-        <div className="flex w-fit justify-start">
-          <h1 className="select-none">
-            TOPSPOT<span className="text-base text-primary tracking-tight">HCM</span>
-          </h1>
-        </div>
-        <div className="flex-1 font-heading hidden lg:flex">
+      <header className="flex w-full sticky top-0 z-10 items-center justify-between py-4 px-8">
+        <h1 className="select-none">
+          TOPSPOT<span className="text-base text-primary tracking-tight">HCM</span>
+        </h1>
+
+        <div className="flex-1 font-heading hidden lg:flex w-full max-w-lg focus-within:max-w-xl transition-[max-width] duration-300 ease-out">
           <InputGroup className="py-5 gap-2">
             <InputGroupInput placeholder="Search jobs and companies" className="text-base!" />
             <InputGroupAddon>
@@ -20,7 +19,8 @@ export default function Home2() {
             </InputGroupAddon>
           </InputGroup>
         </div>
-        <div className="flex justify-end gap-2">
+
+        <div className="flex gap-2">
           <Button variant="secondary">Login</Button>
           <Button>Post a job</Button>
         </div>
@@ -164,9 +164,29 @@ export default function Home2() {
           </div>
         </section>
         <section className="px-8">
-          <div className="flex w-full justify-between items-center bg-secondary rounded-md p-2">
-            <p>123</p>
-            <p>123</p>
+          <div className="flex w-full justify-between items-center p-2">
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-muted-foreground">sort by</p>
+              <div className="flex items-center gap-0">
+                <Button variant="ghost" className="text-base">
+                  Latest
+                </Button>
+                <Button variant="ghost" className="text-base">
+                  Relevance
+                </Button>
+                <Button variant="ghost" className="text-base">
+                  Most viewed
+                </Button>
+                <Button variant="ghost" className="text-base">
+                  Most applicants
+                </Button>
+              </div>
+            </div>
+
+            <Button variant="ghost">
+              <SlidersHorizontal />
+              More filters
+            </Button>
           </div>
         </section>
         <section className="py-12">
