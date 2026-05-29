@@ -1,18 +1,19 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 
-import { SearchIcon, SlidersHorizontal } from "lucide-react";
+import { ExternalLink, SearchIcon, Share, SlidersHorizontal } from "lucide-react";
 
 export default function Home2() {
   return (
     <>
-      <header className="flex w-full sticky top-0 z-10 items-center justify-between py-4 px-8 bg-background">
+      <header className="flex w-full sticky top-0 z-10 items-center justify-between py-4 px-8 bg-background/80 backdrop-blur-xs">
         <h1 className="select-none">
           TOPSPOT<span className="text-base text-primary tracking-tight">HCM</span>
         </h1>
 
         <div className="flex-1 font-heading hidden lg:flex w-full max-w-lg focus-within:max-w-xl transition-[max-width] duration-300 ease-out">
-          <InputGroup className="py-5 gap-2">
+          <InputGroup className="py-5 gap-2 border-ring/25">
             <InputGroupInput placeholder="Search jobs and companies" className="text-base!" />
             <InputGroupAddon>
               <SearchIcon />
@@ -163,7 +164,7 @@ export default function Home2() {
             </ul>
           </div>
         </section>
-        <section className="sticky top-[68px] z-10 bg-background px-8">
+        <section className="sticky top-[68px] z-10 px-8 bg-background/80 backdrop-blur-xs">
           <div className="flex w-full justify-between items-center p-2">
             <div className="flex items-center gap-2">
               <p className="text-sm text-muted-foreground">sort by</p>
@@ -186,10 +187,9 @@ export default function Home2() {
             </Button>
           </div>
         </section>
-        {/* OPTION 1 — Compact single-line rows (densest, fastest scan) */}
         <section className="py-12">
           <div className="px-8">
-            <div className="divide-y border-y first:border-t-0 last:border-b-0">
+            <Accordion className="rounded-none px-2">
               {[
                 {
                   title: "Senior SuccessFactors Consultant",
@@ -237,8 +237,8 @@ export default function Home2() {
                   requirements: ["Cornerstone admin experience", "Learning content management", "Reporting and analytics"],
                 },
               ].map((job) => (
-                <details key={job.title} className="group">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-3 [&::-webkit-details-marker]:hidden">
+                <AccordionItem key={job.title} value={job.title} className="data-open:bg-transparent">
+                  <AccordionTrigger className="group items-center gap-6 px-0 py-3 text-base font-normal hover:no-underline **:data-[slot=accordion-trigger-icon]:hidden">
                     <div className="flex min-w-0 items-baseline gap-3">
                       <span className="truncate font-medium group-hover:underline">{job.title}</span>
                       <span className="truncate text-sm text-muted-foreground">{job.company}</span>
@@ -248,31 +248,34 @@ export default function Home2() {
                       <span>{job.type}</span>
                       <span className="tabular-nums text-foreground">{job.salary}</span>
                     </div>
-                  </summary>
-                  <div className="flex items-start justify-between gap-8 pb-6 pt-1">
-                    <div className="max-w-2xl">
-                      <p className="text-sm leading-relaxed text-foreground/80">{job.description}</p>
-                      <ul className="mt-4 space-y-1">
-                        {job.requirements.map((req) => (
-                          <li key={req} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <span className="size-1 rounded-full bg-muted-foreground" />
-                            {req}
-                          </li>
-                        ))}
-                      </ul>
+                  </AccordionTrigger>
+                  <AccordionContent className="-mx-4 pl-4 pt-1 pb-6">
+                    <div className="flex items-start justify-between gap-8">
+                      <div className="max-w-2xl">
+                        <p className="text-sm leading-relaxed text-foreground/80">{job.description}</p>
+                        <ul className="space-y-1">
+                          {job.requirements.map((req) => (
+                            <li key={req} className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <span className="size-1 rounded-full bg-muted-foreground" />
+                              {req}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="flex shrink-0 items-center gap-2">
+                        <Button>
+                          Apply
+                          <ExternalLink />
+                        </Button>
+                        <Button variant="outline" size="icon">
+                          <Share />
+                        </Button>
+                      </div>
                     </div>
-                    <div className="flex shrink-0 items-center gap-2">
-                      <a href="#" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
-                        Apply
-                      </a>
-                      <button type="button" className="inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                        Share
-                      </button>
-                    </div>
-                  </div>
-                </details>
+                  </AccordionContent>
+                </AccordionItem>
               ))}
-            </div>
+            </Accordion>
           </div>
         </section>
       </main>
